@@ -14,7 +14,7 @@ ANY USE OF THIS OF THIS SOFTWARE MUST BE PROPERLY REFERENCED, AND THE FOLLOWING 
 --------------- FUNCTIONALITY ---------------
 This software provides a web interface template for Paired Comparisons. The template is written in PHP and requires javascript. Video playback has been implemented according to the HTML5 standard and can be played in all modern major browsers except Opera. The input videos are assumed to be in 720p and to be stored in the MP4 container format. The interface communicates with a SQL database to store the information.
 
-The main pages of the interface consist of an introduction page, the test loop and an end page. Most pages assumes that a unique id is passed as a variable in the url. The PHP scripts are:
+The main pages of the interface consist of an introduction page, a test loop and an end page. Most pages assumes that a unique id is passed as a variable in the url. The PHP scripts are:
 
 # index.php #
 Contains brief instructions, a screentest (https://github.com/St1c/screentest) for quality control and a small survey. Behind the scenes different checks are made (e.g. is javascript enabled) and the first pair of videos is preloaded to ensure uninterrupted playback. Also the sequence of the video pairs is randomly determined (the interface currently contains 14 different tracks of sequences with 9 video pairs in each).
