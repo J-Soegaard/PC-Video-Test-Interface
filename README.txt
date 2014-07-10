@@ -1,6 +1,8 @@
+###############################################################################
 Interface Template for Web-based Subjective Video Quality Experiments using Paired Comparison
+###############################################################################
 
--- LICENSE --
+--------------- LICENSE ---------------
 This work is licensed under a Creative Commons Attribution 4.0 International License.
 
 THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
@@ -9,8 +11,7 @@ ANY USE OF THIS OF THIS SOFTWARE MUST BE PROPERLY REFERENCED, AND THE FOLLOWING 
 
 "Crowdsourcing based subjective quality assessment of adaptive video streaming", M. Shahid, J. Søgaard, J. Pokhrel, K. Brunnström, K. Wang, and S. Tavakoli, QoMEX 2014 (Accepted)
 
--- FUNCTIONALITY --
-
+--------------- FUNCTIONALITY ---------------
 This software provides a template for a web interface for Paired Comparisons. The interface is written in PHP and requires javascript. Videos playback has been implemented according to the HTML5 standard and can be played in all modern major browsers except Opera. The input videos are assumed to be in 720p and to be stored in the MP4 container format. The interface communicates with a SQL database to store the information.
 
 The main pages of the interface consist of an introduction page, the test loop and an end page. Most pages assumes that a unique id is passed as variable in the url. The PHP scripts are:
@@ -76,8 +77,7 @@ Contains database and feedback url information. See installation.
     The index.php, end.php, and every page in the test loop contains a link to this page with more detailed instruction for each step in the experiment.
 
 
--- INSTALLATION --
-
+--------------- INSTALLATION ---------------
 The interface requires a web server supporting PHP and mySQL. To install the interface follow these steps:
 
  - Copy the files and folders to your web server. 
