@@ -84,8 +84,14 @@ The interface requires a web server supporting PHP and mySQL. To install the int
  - Import the SQL template in the sql folder to your database. 
  - Edit dbinfo.inc.php so that is contains the information of your database and an url to where the subjects can leave feedback (assumed to be a forum thread). 
  - The test version of the interface should now be working. To customize, edit the database and scripts where needed, and add your test videos.
+
+Note: Since some parameters are defined directly in the code, some knowledge of PHP might be required to use this tool. This might be addressed in future updates.
  
 When conducting a subjective experiment:
  - Give each subject a unique url to the interface e.g. YOURDOMAIN.COM/index.php?id=ID, where ID is a unique subject ID.
  - Track the progress of the experiment using the status page i.e. YOURDOMAIN.COM/status.php.
  - Export experiment data from the database
+
+--------------- FEEDBACK ---------------
+
+If you got questions, feedback or suggestions for improvements please e-mail: jsog at fotonik.dtu.dk.
