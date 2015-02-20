@@ -1,0 +1,26 @@
+The end.php file contains information for the subject when he/she is done with the test.
+
+Dependencies:
+- css/bootstrap.css
+- js/bootstrap.js
+- js/jquery.js
+- dbinfo.inc.php
+
+
+Redirections:
+- reconnect.php
+- instruction/instruction.php
+
+
+Functionality
+PHP
+- To prevent cheating, the subject id is looked up in database. If the subject is not done with all pairings, the subject will be redirected to reconnect.php to continue the test where the subject left off.
+- The unique worker code is generated using SHA1 encoding on the subject id and an independent word.
+
+HTML
+- A small button with a hyperlink to the detailed instructions (instruction/instruction.php) is shown in the upper right corner.
+- A thank you text is displayed and the unique worker code is displayed with a small button to ease the task. 
+- A link to a forum thread where feedback can be given is listed.
+
+Javascript
+- A small script handles the prompt to copy the code.

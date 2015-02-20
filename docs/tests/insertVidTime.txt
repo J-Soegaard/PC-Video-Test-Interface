@@ -1,0 +1,14 @@
+The insertVidTime.php file is used for inserting the time spent watching a video into the database.
+
+Dependencies:
+- dbinfo.inc.php
+
+
+Redirections:
+
+
+Functionality
+PHP
+- The time variable is put into the database.
+
+

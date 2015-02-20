@@ -1,0 +1,30 @@
+The test1.php file is used to display the second video of a pairing.
+
+Dependencies:
+- css/bootstrap.css
+- js/bootstrap.js
+- js/jquery.js
+- dbinfo.inc.php
+- tests/insertVidTime.php
+
+Redirections:
+- tests/test3.php
+- instruction/instruction.php
+
+Functionality
+PHP
+- The second video in the next pairing is retrieved from the database.
+
+HTML
+- At the top of the page the following text is displayed "Video B, Pair n/9", where n is the current pair.
+- Below the top text, centered, a button to play the video is displayed. When the video is done playing, a button enabling the subject going to the voting page is displayed beside the play button. After the video has been played, the play button can be pressed to play the video again if desired.
+- In the upper right corner, a button redirecting to the full list of instructions is displayed.
+- The video is displayed below the other elements without any methods of control (no fast forward etc.)
+
+Javascript
+- A script keeping track of time spent watching the video is started during window load. When the next button is pressed, this information is sent to the database using insertVidTime.php. This can be used to detect cheaters.
+- A script will make the next button appear after the first time the video has been played.
+- A script will pause the video if the window is deselected, e.g. subject has changed tab or window.
+
+
+

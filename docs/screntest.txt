@@ -1,0 +1,12 @@
+The screentest.php file is used for inserting the screentest information into the database.
+
+Dependencies:
+- dbinfo.inc.php
+
+
+Redirections:
+
+
+Functionality
+PHP
+- Screentest information for the subject is put into the database.

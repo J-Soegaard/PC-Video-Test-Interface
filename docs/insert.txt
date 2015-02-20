@@ -1,0 +1,14 @@
+The insert.php file is used for inserting the information about a new subject into the database.
+
+Dependencies:
+- dbinfo.inc.php
+
+
+Redirections:
+
+
+Functionality
+PHP
+- The display order of the first pair of videos is randomized.
+- Subject information collected from the questionnaire and test information for the subject is put into the database.
+

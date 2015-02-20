@@ -1,0 +1,46 @@
+Overall assumptions: 9 pairings per test. 3 contents per test. A modified version of bootstrap is used for styling and jquery is used for scripting.
+
+The index.php file contains the information about the front page. It depends on the following files:
+css/bootstrap.css
+js/bootstrap.js
+js/screentest.js
+js/jquery.js
+screentest.php
+insert.php
+dbinfo.inc.php
+
+It redirects to the following sites:
+- reconnect.php
+- errors/noid.php
+- errors/javascript.php
+- errors/resolution.php
+- errors/screentestfail.php.
+- instruction/instruction.php
+- tests/test1.php
+
+
+Functionality
+PHP
+- If no id is passed in the url parameter, e.g. (http://example.com/?id=subjectID), the subject is redirected to errors/noid.php.
+- The id of the subject is checked against the database. If the subject id is already registered, the subject is redirected to reconnect.php.
+- The number of tests completed and started for each different group of pairings is accessed and the group of pairings with lowest number of completions is selected for the subject. If multiple groups are tied, the group with the lowest number of tests started is selected. If there still is a tie, the group with the lowest numerical order is chosen.
+- The sequence in which to display the pairings is randomized and 1 pairing per content is randomly chosen to require a control question. 
+- The names of the videos from the first pairing are accessed and forwarded to javascript part of the webpage. 
+
+HTML
+- If no javascript is disabled the subject is redirected to errors/javascript.php.
+- If old versions of the IE browser is detected, some compatibility scripts are loaded.
+- Short version of the task instructions are displayed. A hyperlink to the detailed instructions (instruction/instruction.php) is given in text and a button can be pressed to display some background information about the test.
+- A screentest is shown to record information about the subject's viewing display and check the reliability of the subject. If the reliability of the subject is too low the user is redirected to errors/screentestfail.php. When the screentest is done, it will be replaced by a small text, telling the subject to fill in the questionnaire below before proceeding.
+- A small questionnaire is shown to record information about demographic and video habits.
+- A "Start Test" button is shown when the first pair of videos are preloaded. When pressed, dialog boxes with error information are displayed if either the screentest or questionnaire is incomplete. Otherwise, it will redirect to tests/test1.php.
+- A progress bar is shown at the bottom of the page to display the loading of the first pair of videos.
+
+Javascript
+- The first pair of videos are displayed in 1x1 pixel resolution (practically hidden from the subject) and automatically played at high speed to ensure no unintentional temporal distortions when played later.
+- Time variables are initialized at page load.
+- If the resolution of the browser window is too low to support 720p videos, the user is redirected to errors/resolution.php.
+- Script to calculate the reliability score from the screentest and to pass the information from the screentest to screentest.php is defined.
+- Script to check whether the screentest and questionnaire has been answered is defined. If this is the case, subject information is passed to insert.php and the subject is redirected to tests/test1.php when the "Start Test" button is pressed.
+- Script to keep track of the process of the preloading of the first pair of videos is defined. This is used to update the progress bar.
+
