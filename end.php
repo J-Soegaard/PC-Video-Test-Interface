@@ -16,6 +16,7 @@ if ($next < 10) {
         ob_end_clean();
     }
     header("Location: reconnect.php?id=$id");
+    echo 'test';
     exit();
 }
 ?>
