@@ -1,0 +1,37 @@
+The test1.php file is used to display voting interface and record the answers.
+
+Dependencies:
+- css/bootstrap.css
+- js/bootstrap.js
+- js/jquery.js
+- dbinfo.inc.php
+- tests/insert.php
+
+Redirections:
+- end.php
+- tests/test1.php
+- instruction/instruction.php
+
+Functionality
+PHP
+- It's checked in the database whether there should be a control question for the current pair of videos. If this is the case, information about the control question, possible answers and the correct answer is loaded.
+- It's detected whether the current pair is the last pair of the test. If it's not, the names of the videos for the next pair are retrieved.
+
+
+HTML
+- In the upper right corner, a button redirecting to the full list of instructions is displayed.
+- The question "Which video did you prefer (disregarding the content)?" is displayed with two radio buttons.
+- If a control question is loaded, it's displayed along with 3 choices.
+- A text telling the subject to wait for video loading is displayed.
+- A hidden next button will be revealed when the videos (if any) are loaded.
+- A progress bar shows the status of the video loading.
+
+Javascript
+- The next pair (if any) of videos are displayed in 1x1 pixel resolution (practically hidden from the subject) and automatically played at high speed to ensure no unintentional temporal distortions when played later.
+- If the current pair is the last, the next button will be revealed at window load.
+- A script is used to check whether answers has been given for video preference (and if relevant for the control question). If answers are missing the subject are asked to answer before proceeding. Otherwise, they are posted to the database using tests/insert.php and the subject is directed to either tests/test1.php to evaluate a new pair of videos or to end.php to receive his/her unique code as confirmation.
+- Script to keep track of the process of the preloading of the first pair of videos is defined. This is used to update the progress bar and reveal the next button when appropriate.
+
+
+
+

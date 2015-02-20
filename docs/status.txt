@@ -1,0 +1,19 @@
+The status.php file contains information meant for the test manager. It provides a quick overview of the current status of the tests.
+
+Dependencies:
+- css/bootstrap.css
+- js/bootstrap.js
+- dbinfo.inc.php
+
+
+Redirections:
+
+
+
+Functionality
+PHP
+- Test information is retrieved from the database and passed as HTML.
+
+HTML
+- A table showing the status of the tests are shown. This information includes the number of tests started and number of tests completed.
+
