@@ -93,5 +93,4 @@ When conducting a subjective experiment:
  - Export experiment data from the database
 
 --------------- FEEDBACK ---------------
-
-If you got questions, feedback or suggestions for improvements please e-mail: jsog at fotonik.dtu.dk.
+If you got questions, feedback, or suggestions for improvements please e-mail: jsog at fotonik.dtu.dk.

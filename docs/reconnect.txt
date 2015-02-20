@@ -1,0 +1,30 @@
+The reconnect.php file is used when subject with known ids reconnects to the test. 
+
+Dependencies:
+- css/bootstrap.css
+- js/bootstrap.js
+- js/jquery.js
+- dbinfo.inc.php
+
+
+Redirections:
+- end.php
+- tests/test1.php
+- errors/resolution.php
+
+
+Functionality
+PHP
+- Subject id is looked up in database. If the subject is not done with all pairings, the next pair of videos are preloaded and the subject can proceed to test1.php when they are fully loaded. Otherwise, the subject is redirected to end.php where he/she can view his/her unique code used for validation.
+
+HTML
+- This page simply consist of a welcome back message, a progress bar showing the loading of the videos and a disabled button that becomes enabled when the loading is done.
+
+Javascript
+- The first pair of videos are displayed in 1x1 pixel resolution (practically hidden from the subject) and automatically played at high speed to ensure no unintentional temporal distortions when played later.
+- Time variables are initialized at page load.
+- If the resolution of the browser window is too low to support 720p videos, the user is redirected to errors/resolution.php.
+- Script to keep track of the process of the preloading of the first pair of videos is defined. This is used to update the progress bar.
+
+
+

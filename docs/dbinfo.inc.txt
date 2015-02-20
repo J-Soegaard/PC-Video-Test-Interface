@@ -1,0 +1,13 @@
+The dbinfo.inc.php file contains database variables, such as username and password, and the url variable used for feedback.
+
+Dependencies:
+
+Redirections:
+
+
+
+Functionality
+PHP
+- The variables are stored as PHP variables.
+
+

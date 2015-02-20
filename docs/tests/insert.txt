@@ -1,0 +1,15 @@
+The tests/insert.php file is used for inserting test answers into the database.
+
+Dependencies:
+- dbinfo.inc.php
+
+
+Redirections:
+
+
+Functionality
+PHP
+- The display order of the next pair of videos (if any) is randomized.
+- Test answers is put into the database.
+- If the test is done, the number of completed tests are updated.
+

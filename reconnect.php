@@ -32,7 +32,7 @@
         $sql2 = "SELECT * FROM " . $dbname . ".results WHERE Test_id='$test_id[0]'";
 
         $vid1 = $conn->query($sql2)->fetch_object()->Vid1;
-        $vid2 = $conn->query($sql2)->fetch_object()->Vid2;        
+        $vid2 = $conn->query($sql2)->fetch_object()->Vid2;
         mysqli_close($conn);
     } else {
         mysqli_close($conn);
@@ -69,7 +69,7 @@
 
             <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" id="percentage" style="width: 0%;">
-                   <b id="progress-text">0 %</b>
+                    <b id="progress-text">0 %</b>
                 </div>
                 <br/>
 
@@ -87,11 +87,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
     <script>
-            $(window).load(function() {  
-                if (!(geoplugin_continentCode() === "EU" || geoplugin_continentCode() === "NA")) {
-                    window.location = "errors/continent.php";
-                }
-                else if (($(window).height() < 810) || ($(window).width() < 1260)) {
+            $(window).load(function () {
+//                if (!(geoplugin_continentCode() === "EU" || geoplugin_continentCode() === "NA")) {
+//                    window.location = "errors/continent.php";
+//                }
+//                else 
+                if (($(window).height() < 810) || ($(window).width() < 1260)) {
                     window.location = "errors/resolution.php";
                 }
                 else {
@@ -102,7 +103,7 @@
 
             });
             // Attach handler to "Start"-button -> When clicked, the intro goes away and the first page is shown (if all preloading is finished).
-            $('#start').on('click', function() {
+            $('#start').on('click', function () {
 
                 window.location = "tests/test1.php?id=<?php echo $id ?>";
             });
